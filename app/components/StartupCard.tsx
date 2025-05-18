@@ -1,8 +1,9 @@
 import { formatDate } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
+import { Post } from "../types";
 
-const StartupCard = ({post}: any ) => {
+const StartupCard = ({post}: {post: Post} ) => {
     const { _createdAt, _id, author: { _id: authorId, name, image: authorImage  }, description, image, title, category } = post
     return (
         <li className="startup-card group">

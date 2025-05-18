@@ -2,6 +2,7 @@ import SearchForm from "../components/SearchForm";
 import StartupCard from "../components/StartupCard";
 import { STARTUPS_QUERY } from "@/sanity/lib/queries";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
+import { Post } from "../types";
 
 
 export default async function Home({searchParams}: {searchParams: {query?: string}}) {
@@ -26,7 +27,7 @@ export default async function Home({searchParams}: {searchParams: {query?: strin
           {query ? `Showing results for "${query}"` : "Trending Pitches"}
         </p>
         <ul className="mt-7 card_grid">
-            {posts.length > 0 ? posts.map((post: any) => (
+            {posts.length > 0 ? posts.map((post: Post) => (
                <StartupCard key={post._id} post={post} />
             )) : (
                 <p className="no-result">No results found</p>

@@ -8,12 +8,13 @@ import { Send } from "lucide-react";
 import { formSchema } from "@/lib/validation";
 import { z } from "zod";
 import { createPitch } from "@/lib/actions";
+import { PrevState } from "../types";
 
 
 const StartupForm = () => {
     const [errors, setErrors] = useState<Record<string, string>>({});
     const [pitch, setPitch] = useState('');
-    const handleFormSubmit = async (prevState: any, formData: FormData) => {
+    const handleFormSubmit = async (prevState: PrevState, formData: FormData) => {
         try {
             const formValues = {
                 title: formData.get('title') as string,
@@ -30,18 +31,22 @@ const StartupForm = () => {
             }
             return {...prevState, error: "something went wrong", status: "ERROR"}
         } catch (error) {
-            if(error instanceof z.ZodError) {
-                const fieldErrors = error.flatten().fieldErrors;
+            const zodError = error as z.ZodError;
+            if (zodError) {
+                const fieldErrors = zodError.flatten().fieldErrors;
                 setErrors(fieldErrors as unknown as Record<string, string>);
-                return {...prevState, error: "validation failed", status: "ERROR"}
+                return { ...prevState, error: "validation failed", status: "ERROR" }
+            } else {
+                return { ...prevState, error: "something went wrong", status: "ERROR" }
             }
-            return {...prevState, error: "something went wrong", status: "ERROR"}
         } 
     }
     const [state, formAction, isPending] = useActionState(handleFormSubmit,{
         error: "",
         status: "INITIAL"
     });
+
+    console.log(state);
     
     return (
        <form action={formAction} className="startup-form">
