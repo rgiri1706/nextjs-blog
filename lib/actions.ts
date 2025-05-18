@@ -4,8 +4,9 @@ import { auth } from "@/auth";
 import { parseServerActionResponse } from "./utils";
 import slugify from "slugify";
 import { writeClient } from "@/sanity/lib/write-client";
+import { PrevState } from "@/app/types";
 
-export const createPitch = async (state: any, form: FormData, pitch: string) => {
+export const createPitch = async (state: PrevState, form: FormData, pitch: string) => {
     const session = await auth();
     if(!session) {
         return parseServerActionResponse({...state, error: "You must be logged in to pitch", status: "ERROR"});
