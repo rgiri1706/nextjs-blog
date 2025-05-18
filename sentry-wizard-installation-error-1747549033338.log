@@ -1,0 +1,87 @@
+npm WARN ERESOLVE overriding peer dependency
+npm WARN While resolving: @sanity/preview-kit@5.2.6
+npm WARN Found: @sanity/client@7.2.1
+npm WARN node_modules/@sanity/client
+npm WARN   @sanity/client@"^7.2.1" from @sanity/cli@3.88.3
+npm WARN   node_modules/@sanity/cli
+npm WARN     @sanity/cli@"3.88.3" from sanity@3.88.3
+npm WARN     node_modules/sanity
+npm WARN   8 more (@sanity/migrate, @sanity/presentation-comlink, ...)
+npm WARN 
+npm WARN Could not resolve dependency:
+npm WARN peer @sanity/client@"^6.28.0" from @sanity/preview-kit@5.2.6
+npm WARN node_modules/@sanity/preview-kit
+npm WARN   @sanity/preview-kit@"5.2.6" from next-sanity@9.8.58-canary.0
+npm WARN   node_modules/next-sanity
+npm WARN 
+npm WARN Conflicting peer dependency: @sanity/client@6.29.1
+npm WARN node_modules/@sanity/client
+npm WARN   peer @sanity/client@"^6.28.0" from @sanity/preview-kit@5.2.6
+npm WARN   node_modules/@sanity/preview-kit
+npm WARN     @sanity/preview-kit@"5.2.6" from next-sanity@9.8.58-canary.0
+npm WARN     node_modules/next-sanity
+npm WARN ERESOLVE overriding peer dependency
+npm WARN While resolving: @sanity/visual-editing@2.13.2
+npm WARN Found: @sanity/client@6.29.1
+npm WARN node_modules/@sanity/visual-editing/node_modules/@sanity/client
+npm WARN   @sanity/client@"^6.22.4" from @sanity/mutate@0.11.0-canary.4
+npm WARN   node_modules/@sanity/visual-editing/node_modules/@sanity/mutate
+npm WARN     @sanity/mutate@"0.11.0-canary.4" from @sanity/visual-editing@2.13.2
+npm WARN     node_modules/@sanity/visual-editing
+npm WARN 
+npm WARN Could not resolve dependency:
+npm WARN peerOptional @sanity/client@"^6.28.0" from @sanity/visual-editing@2.13.2
+npm WARN node_modules/@sanity/visual-editing
+npm WARN   @sanity/visual-editing@"2.13.2" from next-sanity@9.8.58-canary.0
+npm WARN   node_modules/next-sanity
+npm WARN 
+npm WARN Conflicting peer dependency: @sanity/client@6.29.1
+npm WARN node_modules/@sanity/client
+npm WARN   peerOptional @sanity/client@"^6.28.0" from @sanity/visual-editing@2.13.2
+npm WARN   node_modules/@sanity/visual-editing
+npm WARN     @sanity/visual-editing@"2.13.2" from next-sanity@9.8.58-canary.0
+npm WARN     node_modules/next-sanity
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: next-sanity@9.8.58-canary.0
+npm ERR! Found: @sanity/client@7.2.1
+npm ERR! node_modules/@sanity/client
+npm ERR!   @sanity/client@"^7.2.1" from @sanity/cli@3.88.3
+npm ERR!   node_modules/@sanity/cli
+npm ERR!     @sanity/cli@"3.88.3" from sanity@3.88.3
+npm ERR!     node_modules/sanity
+npm ERR!       peer sanity@"^3.75.0" from next-sanity@9.8.58-canary.0
+npm ERR!       node_modules/next-sanity
+npm ERR!         next-sanity@"^9.8.58-canary.0" from the root project
+npm ERR!       2 more (sanity-plugin-markdown, the root project)
+npm ERR!   @sanity/client@"^7.2.1" from @sanity/migrate@3.88.3
+npm ERR!   node_modules/@sanity/migrate
+npm ERR!     @sanity/migrate@"3.88.3" from sanity@3.88.3
+npm ERR!     node_modules/sanity
+npm ERR!       peer sanity@"^3.75.0" from next-sanity@9.8.58-canary.0
+npm ERR!       node_modules/next-sanity
+npm ERR!         next-sanity@"^9.8.58-canary.0" from the root project
+npm ERR!       2 more (sanity-plugin-markdown, the root project)
+npm ERR!   7 more (@sanity/presentation-comlink, ...)
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer @sanity/client@"^6.28.0" from next-sanity@9.8.58-canary.0
+npm ERR! node_modules/next-sanity
+npm ERR!   next-sanity@"^9.8.58-canary.0" from the root project
+npm ERR! 
+npm ERR! Conflicting peer dependency: @sanity/client@6.29.1
+npm ERR! node_modules/@sanity/client
+npm ERR!   peer @sanity/client@"^6.28.0" from next-sanity@9.8.58-canary.0
+npm ERR!   node_modules/next-sanity
+npm ERR!     next-sanity@"^9.8.58-canary.0" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! 
+npm ERR! For a full report see:
+npm ERR! /Users/rohitgiri/.npm/_logs/2025-05-18T06_17_11_491Z-eresolve-report.txt
+
+npm ERR! A complete log of this run can be found in: /Users/rohitgiri/.npm/_logs/2025-05-18T06_17_11_491Z-debug-0.log
