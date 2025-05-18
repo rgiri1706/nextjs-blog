@@ -4,8 +4,11 @@ import { STARTUPS_QUERY } from "@/sanity/lib/queries";
 import { sanityFetch, SanityLive } from "@/sanity/lib/live";
 import { Post } from "../types";
 
+type SearchPageProps = {
+  searchParams: Promise<{ query?: string }>;
+}
 
-export default async function Home({searchParams}: {searchParams: {query?: string}}) {
+export default async function Home({ searchParams }: SearchPageProps) {
   const query = (await searchParams).query;
   const params = {search: query || null};
 
